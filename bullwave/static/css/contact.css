@@ -181,8 +181,8 @@ svg{display:block;}
     min-width:max-content;
 }
 .logo-box img{
-    width:58px;
-    height:58px;
+     width:100px;
+    height:100px;
     object-fit:contain;
     filter:drop-shadow(0 7px 14px rgba(16,24,40,.09));
 }

@@ -268,8 +268,8 @@ main {
 }
 
 .logo-box img{
-  width:48px;
-  height:48px;
+   width:100px;
+    height:100px;
   object-fit:cover;
   border-radius:12px;
 }
@@ -596,52 +596,52 @@ main {
 /* ─────────────────────────────────
    BILLING TOGGLE
 ───────────────────────────────── */
-
 .toggle-wrap{
-  position:relative;
-  z-index:1;
+  position: relative;
+  z-index: 1;
 
-  display:flex;
-  justify-content:center;
+  display: flex;
+  justify-content: center;
 
-  margin-bottom:60px;
+  margin-bottom: 60px;
 }
 
 .toggle-inner{
-  display:flex;
-  gap:5px;
+  display: inline-flex; /* important */
+  width: fit-content;   /* important */
 
-  background:#fff;
+  gap: 5px;
+  background: #fff;
 
-  border:1px solid var(--border);
-  border-radius:999px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
 
-  padding:5px;
-
-  box-shadow:var(--shadow-sm);
+  padding: 5px;
+  box-shadow: var(--shadow-sm);
 }
 
 .toggle-btn{
-  border:none;
-  background:transparent;
+  flex: 0 0 auto; /* prevent stretching */
 
-  padding:10px 24px;
+  border: none;
+  background: transparent;
 
-  border-radius:999px;
+  padding: 10px 24px;
 
-  font-size:14px;
-  font-weight:700;
+  border-radius: 999px;
 
-  color:var(--slate);
+  font-size: 14px;
+  font-weight: 700;
 
-  cursor:pointer;
+  color: var(--slate);
+  cursor: pointer;
 
-  transition:.25s;
+  transition: .25s;
 }
 
 .toggle-btn.active{
-  background:var(--navy);
-  color:#fff;
+  background: var(--navy);
+  color: #fff;
 }
 
 .save-badge{
