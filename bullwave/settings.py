@@ -6,10 +6,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-b_!hl3=r8fk6+ptb=^m6rg*4)s&r4#d2d4_4yf7!ox32h$70#!'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -24,16 +20,20 @@ INSTALLED_APPS = [
 
     'reviews',
 ]
+'whitenoise.middleware.WhiteNoiseMiddleware',
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
+    'django.middleware.security.SecurityMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+
 
 ROOT_URLCONF = 'bullwave.urls'
 
@@ -110,7 +110,16 @@ STATICFILES_DIRS = [
     BASE_DIR / 'bullwave' / 'static',
 ]
 
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # Default primary key field type
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+DEBUG = False
+
+ALLOWED_HOSTS = [
+    "capitalbullwave.com",
+    "www.capitalbullwave.com",
+    ".onrender.com",
+]
